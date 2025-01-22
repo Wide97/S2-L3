@@ -258,3 +258,21 @@ console.log("charactersNames aggiornato:", charactersNames);
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
+
+function printRandomCharacterInfo() {
+  const randomIndex = Math.floor(Math.random() * starWarsCharacters.length);
+  const randomCharacter = starWarsCharacters[randomIndex];
+
+  let description = `Il personaggio selezionato è ${randomCharacter.name}.`;
+  description += ` Il suo genere è "${randomCharacter.gender}"`;
+  description += randomCharacter.eye_color
+    ? ` e ha occhi di colore "${randomCharacter.eye_color}".`
+    : `.`;
+  description += randomCharacter.mass
+    ? ` La sua massa è di ${randomCharacter.mass} kg.`
+    : ``;
+
+  console.log(description);
+}
+
+printRandomCharacterInfo();
