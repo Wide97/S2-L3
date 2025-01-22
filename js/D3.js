@@ -32,7 +32,7 @@ const starWarsCharacters = [
   {
     name: 'Darth Vader',
     height: 202,
-    mass: 136,
+    mass: 2,
     hair_color: 'none',
     skin_color: 'white',
     eye_color: 'yellow',
@@ -92,7 +92,7 @@ const starWarsCharacters = [
   {
     name: 'Obi-Wan Kenobi',
     height: 182,
-    mass: 77,
+    mass: 2,
     hair_color: 'auburn, white',
     skin_color: 'fair',
     eye_color: 'blue-gray',
@@ -210,6 +210,18 @@ console.log (crewMass);
 
   Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
+
+if(crewMass <500) {
+  console.log("Ship is under loaded")
+} else if (crewMass >500 && crewMass <700) {
+  console.log("Ship is half loaded")
+} else if (crewMass >700 && crewMass <900) {
+  console.log("Warning: Load is over 700")
+} else if (crewMass >900 && crewMass <1000) {
+  console.log("Critical Load: Over 900")
+} else {
+  console.log("DANGER! OVERLOAD ALERT: escape from ship now!")
+}
 
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
